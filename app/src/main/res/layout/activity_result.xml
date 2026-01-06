@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/quizHead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/afacad_bold"
+        android:padding="20dp"
+        android:text="QuizzBuzz"
+        android:textColor="@color/text_dark"
+        android:textSize="30sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/option_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="100dp"
+            android:paddingTop="50dp"
+            android:paddingRight="100dp"
+            android:paddingBottom="50dp">
+
+            <!-- Icon -->
+            <ImageView
+                android:id="@+id/brainImg"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Result Icon"
+                android:src="@drawable/brain" />
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/afacad_bold"
+                android:text="Quiz Completed!"
+                android:textColor="@color/text_dark"
+                android:textSize="22sp" />
+
+            <!-- Score -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/afacad_bold"
+                    android:gravity="bottom"
+                    android:textColor="@color/accent"
+                    android:textSize="48sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/totalScore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:text="/10"
+                    android:textColor="@color/text_dark"
+                    android:textSize="24sp" />
+            </LinearLayout>
+
+            <!-- Feedback Message -->
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="@font/afacad_bold"
+                android:text="Great Job!"
+                android:textColor="@color/text_dark"
+                android:textSize="20sp" />
+
+            <!-- Play Again Button -->
+            <Button
+                android:id="@+id/playAgainBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/accent"
+                android:paddingVertical="14dp"
+                android:text="Play Again"
+                android:textColor="@color/text_light"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>
